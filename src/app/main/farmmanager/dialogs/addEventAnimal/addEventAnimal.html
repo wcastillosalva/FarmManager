@@ -1,0 +1,46 @@
+<md-dialog flex="50">
+  <form ng-cloak>
+    <md-toolbar layout="row" layout-align="space-between center" class="md-green-700-bg grey-A100-fg" layout-xs="column">
+      <div class="md-toolbar-tools">
+        <h2>{{'FARMMANAGER.MANAGE.ANIMAL.MODAL.ADD_EVENT.ADD_EVENT_TO_ANIMAL'|translate}}: {{model.animal.code}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="model.cancel()">
+          <md-icon md-font-icon="icon-close" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <div class="form-wrapper md-whiteframe-1dp" flex="100">
+          <form name="basicForm" class="md-inline-form" novalidate>
+            <div layout="column" layout-gt-sm="column">
+              <md-input-container flex>
+                <input type="text" name="description" ng-model="model.event.message" placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.MODAL.ADD_EVENT.DESCRIPTION'|translate}}" required>
+                <div ng-messages="basicForm.description.$error" role="alert">
+                  <div ng-message="required">
+                    <span>Description field is required.</span>
+                  </div>
+                </div>
+              </md-input-container>
+              <div flex>
+                <h4>{{'FARMMANAGER.MANAGE.ANIMAL.MODAL.ADD_EVENT.EVENT_DATE'|translate}}</h4>
+                <md-datepicker ng-model="model.event.date" md-placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.MODAL.ADD_EVENT.EVENT_DATE'|translate}}"></md-datepicker>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="model.ok()">
+        {{'FARMMANAGER.MANAGE.ANIMAL.MODAL.ADD_EVENT.ADD'|translate}}
+      </md-button>
+      <md-button ng-click="model.cancel()">
+        {{'FARMMANAGER.MANAGE.ANIMAL.MODAL.ADD_EVENT.CANCEL'|translate}}
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

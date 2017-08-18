@@ -1,0 +1,37 @@
+<md-dialog flex="50">
+  <form ng-cloak>
+    <md-toolbar layout="row" layout-align="space-between center" class="md-green-700-bg grey-A100-fg" layout-xs="column">
+      <div class="md-toolbar-tools">
+        <h2>{{'FARMMANAGER.CONFIG.ANIMALSUBTYPES.MODAL.REMOVE.REMOVE_ANIMAL_SUB_TYPE'|translate}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="model.no()">
+          <md-icon md-font-icon="icon-close" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <div class="form-wrapper md-whiteframe-1dp" flex="100">
+          <form name="basicForm" class="md-inline-form" novalidate>
+            <div layout="column" layout-gt-sm="row">
+              <span class="md-subhead">
+                {{'FARMMANAGER.CONFIG.ANIMALSUBTYPES.MODAL.REMOVE.PLEASE_CONFIRM_YOU_WANT_TO_REMOVE_THE_ANIMAL_SUB_TYPE'|translate}} : {{model.animalSubType.type}}
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="model.yes()">
+        {{'FARMMANAGER.CONFIG.ANIMALSUBTYPES.MODAL.REMOVE.YES'|translate}}
+      </md-button>
+      <md-button ng-click="model.no()">
+        {{'FARMMANAGER.CONFIG.ANIMALSUBTYPES.MODAL.REMOVE.NO'|translate}}
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

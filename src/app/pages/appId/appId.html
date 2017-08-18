@@ -1,0 +1,41 @@
+<div id="coming-soon" class="flex-scrollable" layout="column" ms-scroll>
+  <div id="coming-soon-form-wrapper" layout="column" layout-align="center center">
+    <div id="coming-soon-form" class="md-whiteframe-8dp">
+      <div class="top">
+        <div class="logo md-green-800-bg">
+          <span>FM</span>
+        </div>
+
+        <div class="title" translate="APPID.TITLE">Appication Key.</div>
+        <div class="subtitle" translate="APPID.SUBTITLE">This user not belong to any application, you can create a new application or you can enter the key of the application to which you want to belong, please select an option to continue:
+        </div>
+      </div>
+      <div ng-show="!vm.showEnterSharedKey" layout="column">
+        <md-button class="md-raised md-green-800-bg grey-A100-fg" translate="APPID.ENTER_SHARED_APP_KEY" ng-click="vm.showEnterKey()">Enter Shared App Key</md-button>
+        <md-button class="md-raised md-warn" translate="APPID.CREATE_NEW_APP_KEY" ng-click="vm.createNewKey()">Create New App Key</md-button>
+        <md-button class="md-raised" aria-label="LOGOUT" translate="APPID.LOGOUT" translate-attr-aria-label="APPID.LOGOUT" ng-click="vm.logout()"> LOGOUT</md-button>
+      </div>
+      <form ng-show="vm.showEnterSharedKey">
+        <div class="message" translate="APPID.MESSAGE">
+          Please enter the application key you belong.
+        </div>
+
+        <md-input-container flex md-no-float>
+          <input type="text" placeholder="App Key" translate
+          translate-attr-placeholder="APPID.APP_HEY" ng-model="vm.appKey">
+        </md-input-container>
+
+        <md-button class="md-raised md-green-800-bg grey-A100-fg" aria-label="ASSOCIATE" translate="APPID.ASSOCIATE"
+        translate-attr-aria-label="APPID.ASSOCIATE" ng-click="vm.save()">
+        ASSOCIATE
+      </md-button>
+      <md-button class="md-raised" aria-label="CANCEL" translate="APPID.CANCEL"
+      translate-attr-aria-label="APPID.CANCEL" ng-click="vm.cancel()">
+      CANCEL
+    </md-button>
+
+
+    </form>
+  </div>
+</div>
+</div>

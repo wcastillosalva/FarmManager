@@ -1,0 +1,112 @@
+<div layout="row" layout-wrap>
+
+    <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="65">
+        <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+            <header class="md-accent-bg">
+                <div class="title" translate="PROFILE.GENERAL_INFORMATION">General Information</div>
+            </header>
+
+            <div class="content" ng-show="!vm.editMode">
+                <div class="info-line">
+                    <div class="title" translate="PROFILE.FULL_NAME">Full Name</div>
+                    <div class="info">{{vm.user.fullName}}</div>
+                </div>
+
+                <div class="info-line">
+                    <div class="title" translate="PROFILE.EMAIL">Email</div>
+                    <div class="info">{{vm.user.email}}</div>
+                </div>
+
+                <div class="info-line">
+                    <div class="title" translate="PROFILE.APPKEY">Application Key</div>
+                    <div class="info">{{vm.user.appKey}}</div>
+                </div>
+
+                <div class="info-line">
+                    <div flex>
+                        <span class="title" translate="PROFILE.AUTOSENDDATA">Auto Send Data</span>
+                        <md-button class="md-icon-button test-tooltip">
+                            <md-tooltip md-direction="down" class="md-body-1">{{'PROFILE.AUTOSENDDATAHELPER'|translate}}</md-tooltip>
+                            <md-icon md-font-icon="icon-help-circle" class="s24"></md-icon>
+                        </md-button>
+                    </div>
+                    <div class="info">
+                        <md-switch ng-model="vm.user.autoSendData" ng-click="model.switch(animalType)" disabled>
+                            <span ng-if="vm.user.autoSendData"> {{'PROFILE.ON' | translate}}</span>
+                            <span ng-if="!vm.user.autoSendData"> {{'PROFILE.OFF' | translate}}</span>
+                        </md-switch>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-wrapper md-whiteframe-1dp" flex="60" ng-show="vm.editMode">
+
+                <form name="basicForm" class="md-inline-form" novalidate>
+                    <div layout="column" layout-gt-sm="row">
+                        <md-input-container flex>
+                            <input type="text" name="fullName" ng-model="vm.user.fullName"  placeholder="{{'PROFILE.FULL_NAME'|translate}}" required>
+                            <div ng-messages="basicForm.fullName.$error" role="alert">
+                                <div ng-message="required">
+                                    <span>{{'PROFILE.FULL_NAME_REQUIRED'|translate}}</span>
+                                </div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div layout="column" layout-gt-sm="row">
+                        <md-input-container flex>
+                            <input type="email" name="email" ng-model="vm.user.email" placeholder="{{'PROFILE.EMAIL'|translate}}"  ng-pattern="/^.+@.+\..+$/" required>
+                            <div ng-messages="basicForm.email.$error" role="alert" multiple>
+                                <div ng-message="required">
+                                    <span>{{'PROFILE.EMAIL_REQUIRED'|translate}}</span>
+                                </div>
+                                <div ng-message="pattern">
+                                    <span>{{'PROFILE.EMAIL_VALID_ADDRESS'|translate}}</span>
+                                </div>
+                            </div>
+                        </md-input-container>
+                    </div>
+
+                    <div layout="column" layout-gt-sm="row">
+                        <md-input-container flex="100" flex-gt-xs="50">
+                            <input type="password" name="password" ng-model="vm.user.password" placeholder="{{'PROFILE.PASSWORD'|translate}}"  required focus-me="vm.passwordFocus">
+                            <div ng-messages="basicForm.password.$error" role="alert">
+                                <div ng-message="required">
+                                    <span>{{'PROFILE.PASSWORD_REQUIRED'|translate}}</span>
+                                </div>
+                            </div>
+                        </md-input-container>
+                    </div>
+
+                    <div layout="column" layout-gt-sm="row">
+                        <md-input-container flex="100" flex-gt-xs="50">
+                            <input type="password" name="newPassword" ng-model="vm.user.newPassword" placeholder="{{'PROFILE.NEW_PASSWORD'|translate}}">
+                        </md-input-container>
+                    </div>
+
+                    <div layout="column" layout-gt-sm="row">
+                        <md-input-container flex="100" flex-gt-xs="50">
+                            <input type="password" name="newPasswordConfirm" ng-model="vm.user.newPasswordConfirm" placeholder="{{'PROFILE.NEW_PASSWORD_CONFIRM'|translate}}">
+                        </md-input-container>
+                    </div>
+
+                    <div layout="column">
+                        <span class="md-subhead" translate="PROFILE.AUTOSENDDATA">Auto Send Data</span>
+                        <md-switch ng-model="vm.user.autoSendData" ng-click="model.switch(animalType)">
+                            <span ng-if="vm.user.autoSendData"> {{'PROFILE.ON' | translate}}</span>
+                            <span ng-if="!vm.user.autoSendData"> {{'PROFILE.OFF' | translate}}</span>
+                        </md-switch>
+                    </div>
+
+                    <md-button type="submit" class="md-raised md-green-800-bg grey-A100-fg" aria-label="Submit" ng-disabled="basicForm.$invalid || basicForm.$pristine" ng-click="vm.save()" translate="PROFILE.SUBMIT">
+                        Submit
+                    </md-button>
+                    <md-button type="submit" class="md-raised" aria-label="Cancel" ng-click="vm.cancel()" translate="PROFILE.CANCEL">
+                        Cancel
+                    </md-button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

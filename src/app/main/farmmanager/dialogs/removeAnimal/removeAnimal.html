@@ -1,0 +1,45 @@
+<md-dialog flex="50">
+  <form ng-cloak>
+    <md-toolbar layout="row" layout-align="space-between center" class="md-green-700-bg grey-A100-fg" layout-xs="column">
+      <div class="md-toolbar-tools">
+        <h2>{{'FARMMANAGER.MANAGE.ANIMAL.MODAL.REMOVE.REMOVE_ANIMAL'|translate}}: {{model.animal.code}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="model.cancel()">
+          <md-icon md-font-icon="icon-close" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <div class="form-wrapper md-whiteframe-1dp" flex="100">
+          <form name="basicForm" class="md-inline-form" novalidate>
+            <div layout="column" layout-gt-sm="column">
+              <md-input-container flex>
+                <label>{{'FARMMANAGER.MANAGE.ANIMAL.MODAL.REMOVE.REASON_TYPE'|translate}}</label>
+                <md-select ng-model="model.selectedReason" flex="100">
+                  <md-option ng-repeat="reason in model.removedReasonsCatalog track by reason.id" ng-value="{{reason}}">
+                    {{reason.name}}
+                  </md-option>
+                </md-select>
+              </md-input-container>
+              <md-input-container flex>
+                <input type="text" name="reasonText" ng-model="model.reasonText" placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.MODAL.REMOVE.REASON_TEXT'|translate}}">
+              </md-input-container>
+            </div>
+          </form>
+        </div>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="model.ok()">
+        {{'FARMMANAGER.MANAGE.ANIMAL.MODAL.REMOVE.REMOVE'|translate}}
+      </md-button>
+      <md-button ng-click="model.cancel()">
+        {{'FARMMANAGER.MANAGE.ANIMAL.MODAL.REMOVE.CANCEL'|translate}}
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

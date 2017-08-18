@@ -1,0 +1,16 @@
+{
+    "TOOLBAR": {
+        "TOGGLE_NAVIGATION": "Toggle navigation",
+        "TOGGLE_NAVIGATION_FOLD": "Toggle navigation fold",
+        "TOGGLE_NAVIGATION_MODE": "Toggle navigation mode",
+        "SEARCH": "Search",
+        "USER_SETTINGS": "User settings",
+        "TOGGLE_QUICK_PANEL": "Toggle quick panel",
+        "ENGLISH": "English",
+        "SPANISH": "Español",
+        "DISCONNECTED_MESSAGE": "Connection with server lost, switching to offline mode. Remember that some functionalities will not be available in offline mode!",
+        "CONNECTED_MESSAGE": "Connection stablished, enabling all the funtionatlities!",
+        "DATA_AUTO_SEND_SUCCESS": "Your pending data was sent successfully",
+        "ONLINE_OFFLINE": "Online/Offline"
+    }
+}

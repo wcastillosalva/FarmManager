@@ -1,0 +1,86 @@
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+
+    <!-- HEADER -->
+    <div class="header md-light-green-A200-bg" layout="row" layout-sm="column" layout-xs="column" layout-align="space-between center">
+        <div layout="column" layout-align="center start">
+            <div class="breadcrumb" layout="row" hide-xs layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+            </div>
+            <div class="white-fg" layout="row">
+                <div class="h1" layout="row" layout-align="start center">
+                    <md-icon md-font-icon="icon-cube-outline"></md-icon>
+                    <span class="md-title">{{'FARMMANAGER.HOME.HOME' | translate}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <md-content>
+        <div class="row m-24">
+
+        </div>
+        <div class="widget-group" layout="row" layout="row" flex="100" layout-wrap>
+            <ms-widget flippable="false" layout="column" flex-xs="100" flex-sm="50" flex="25">
+                <ms-widget-front class="h-280 white-bg">
+                    <div class="pl-16 pr-8 pv-16 h-55" layout="row" layout-align="space-between center">
+                        <div class="md-headline">{{'FARMMANAGER.HOME.CHANGES_NOT_SYNCED' | translate}}</div>
+                    </div>
+                <div class="h-170">
+                    <div class="pt-8 pb-8" layout="column" layout-align="center center">
+                        <div class="font-size-72 {{model.getWidgetClass(model.pendingChanges)}}">
+                            {{model.pendingChanges}}
+                        </div>
+                    </div>
+                    <div class="pl-16 pr-8 pb-8">
+                        {{'FARMMANAGER.HOME.PENDING_ITEMS_TITLE' | translate}}
+                    </div>
+                </div>
+                <div class="grey-50-bg border-top pt-10 pb-10 pr-10" layout="row" layout-align="end center">
+                    <md-button class="md-raised md-green-800-bg grey-A100-fg" ng-click="model.goToPendingData()" ng-disabled="!model.pendingDataEnabled">
+                        {{'FARMMANAGER.HOME.GO_TO_PENDING_DATA'|translate}}
+                    </md-button>
+                </div>
+                </ms-widget-front>
+            </ms-widget>
+            <ms-widget flippable="true" layout="column" flex-xs="100" flex-sm="50" flex="25" ng-repeat="animal in model.pinnedAnimals track by animal.code">
+                <ms-widget-front class="h-280 white-bg">
+                    <div class="pl-16 pr-8 pv-16 h-55" layout="row" layout-align="space-between center">
+                        <div class="md-headline">{{animal.code}}</div>
+                        <md-button aria-label="more" class="md-icon-button"
+                        ng-click="flipWidget()">
+                        <md-icon md-font-icon="icon-plus"></md-icon>
+                      </md-button>
+                    </div>
+                    <div class="pt-32 pb-32 pl-32 pr-32 h-170" layout="row" layout-align="center center">
+                        <img ng-show="model.showImmages" ng-src="{{animal.photoUrl}}" style="width:100%" class="md-card-image" alt="This animal photo could not be loaded!">
+                    </div>
+                <div class="grey-50-bg border-top pt-10 pb-10 pr-10" layout="row" layout-align="end center">
+                    <md-button class="md-raised md-green-800-bg grey-A100-fg" ng-click="model.goToAnimal(animal)">
+                        {{'FARMMANAGER.HOME.SEE_MORE'|translate}}
+                    </md-button>
+                </div>
+                </ms-widget-front>
+                <ms-widget-back class="p-16 blue-grey-bg white-fg">
+                  <div class="flip-to-front">
+                    <md-button class="md-icon-button" ng-click="flipWidget()" aria-label="Flip widget">
+                      <md-icon md-font-icon="icon-close" class="s16"></md-icon>
+                    </md-button>
+                  </div>
+                  <div class="pl-16 pr-8 pv-16 h-55" layout="row" layout-align="center center">
+                      <div class="md-headline">{{animal.code}}</div>
+
+                  </div>
+
+                <div>
+                  <div>{{'FARMMANAGER.MANAGE.ANIMAL.LIST.TYPE'|translate}}: {{::model.animalTypes[animal.type].type}}</div>
+                  <div>{{'FARMMANAGER.MANAGE.ANIMAL.LIST.SUB_TYPE'|translate}}: {{::model.animalTypes[animal.type].subTypes[animal.subType].type}}</div>
+                  <div>{{'FARMMANAGER.MANAGE.ANIMAL.LIST.WEIGHT'|translate}}: {{::animal.weight}}</div>
+                  <div>{{'FARMMANAGER.MANAGE.ANIMAL.LIST.SEX'|translate}}: {{::animal.sex}}</div>
+                  <div>{{'FARMMANAGER.MANAGE.ANIMAL.LIST.OWNER'|translate}}: {{::animal.owner}}</div>
+                  <div>{{'FARMMANAGER.MANAGE.ANIMAL.LIST.DATE_OF_BIRTH'|translate}}: {{::animal.dateOfBirth}}</div>
+                </div>
+              </ms-widget-back>
+            </ms-widget>
+        </div>
+
+    </md-content>
+</div>

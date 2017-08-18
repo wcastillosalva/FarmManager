@@ -1,0 +1,37 @@
+<div id="profile" class="page-layout simple tabbed">
+
+    <!-- HEADER -->
+    <div class="header header-max md-light-green-A200-bg" layout="column" layout-align="center center" layout-gt-sm="row" layout-align-gt-sm="space-between end">
+        <div class="user-info" layout="column" layout-align="center center" layout-gt-sm="row" layout-align-gt-sm="start center">
+            <div class="name">{{vm.user.fullName}}</div>
+        </div>
+
+        <div class="actions" layout="row" layout-align="end center">
+            <md-button class="md-raised md-green-800-bg grey-A100-fg" aria-label="Edit" translate="PROFILE.EDIT" translate-attr-aria-label="PROFILE.EDIT" ng-click="vm.editProfile()">Edit
+            </md-button>
+        </div>
+    </div>
+    <!-- / HEADER -->
+    <md-tabs md-dynamic-height>
+        <md-tab>
+            <md-tab-label>
+                <span translate="PROFILE.ABOUT">About</span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class="about-tab" ng-include="'app/pages/profile/tabs/about/about.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+        <md-tab>
+            <md-tab-label>
+                <span translate="PROFILE.LOCALSTORAGE">Local Storage</span>
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class="about-tab" ng-include="'app/pages/profile/tabs/localstorage/localstorage.html'">
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+    </md-tabs>
+    <!-- / CONTENT -->
+
+</div>

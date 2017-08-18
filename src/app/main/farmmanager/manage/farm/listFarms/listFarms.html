@@ -1,0 +1,99 @@
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+
+    <!-- HEADER -->
+    <div class="header md-light-green-A200-bg" layout="row" layout-align="space-between">
+        <div layout="column" layout-align="center start">
+            <div class="breadcrumb" layout="row" hide-xs layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+                <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+                <span class="parent"> {{'FARMMANAGER.BREADCRUMB.FARMS_AVAILABLE' | translate}}</span>
+            </div>
+            <div class="white-fg" layout="row">
+                <div class="h1" layout="row" layout-align="start center">
+                    <md-icon md-font-icon="icon-cube-outline"></md-icon>
+                    <span class="md-title">{{'FARMMANAGER.MANAGE.FARM.LIST.FARMS_AVAILABLE' | translate}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / HEADER -->
+    <md-toolbar layout="row" layout-align="space-between center" class="md-green-700-bg grey-A100-fg">
+        <h2 class="padding-left-24" hide-xs>
+            <span> {{'FARMMANAGER.MANAGE.FARM.LIST.FARMS_AVAILABLE'|translate}}</span>
+        </h2>
+        <div flex></div>
+        <md-button ng-if="!model.showGrid" class="md-icon-button" hide-sm hide-xs aria-label="Favorite" ng-click="model.changeViewType()">
+            <md-icon md-font-icon="icon-grid"></md-icon>
+        </md-button>
+        <md-button ng-if="model.showGrid" class="md-icon-button" hide-sm hide-xs aria-label="More" ng-click="model.changeViewType()">
+            <md-icon md-font-icon="icon-tile-four"></md-icon>
+        </md-button>
+    </md-toolbar>
+    <md-content>
+        <div ng-if="model.showGrid" class="dataTable_wrapper">
+            <table class="simple" ms-responsive-table id="dataTables-example">
+                <thead>
+                    <tr>
+                        <th>{{'FARMMANAGER.MANAGE.FARM.LIST.NAME'|translate}}</th>
+                        <th>{{'FARMMANAGER.MANAGE.FARM.LIST.SIZE'|translate}}</th>
+                        <th>{{'FARMMANAGER.MANAGE.FARM.LIST.TOTAL_ANIMALS'|translate}}</th>
+                        <th>{{'FARMMANAGER.MANAGE.FARM.LIST.TOTAL_PLANTS'|translate}}</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="farm in model.farms track by farm.id">
+                        <td>{{::farm.name}}</td>
+                        <td>{{::farm.size}}</td>
+                        <td>{{farm.totalAnimals}}</td>
+                        <td>{{farm.totalPlants}}</td>
+                        <td class="text-right">
+                            <md-button class="md-raised md-green-800-bg grey-A100-fg" ng-click="model.goToManageFarm(farm)">
+                                {{'FARMMANAGER.MANAGE.FARM.LIST.MANAGE'|translate}}
+                            </md-button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div ng-if="!model.showGrid" class="widget-group" layout="row" flex="100" layout-wrap>
+            <ms-widget layout="column" flex-xs="100" flex-sm="50" flex-md="33" flex-lg="33" flex-xl="25" ng-repeat="farm in model.farms track by farm.id">
+                <ms-widget-front class="white-bg">
+                    <div class="ph-16 border-bottom" layout="row" layout-align="space-between center">
+                        <div class="md-headline">{{farm.name}}</div>
+                    </div>
+                    <div class="pt-8 pb-32" layout="column" layout-align="center center" flex>
+                        <div class="h4">{{'FARMMANAGER.MANAGE.FARM.LIST.SIZE'|translate}}: {{::farm.size}}</div>
+                        <div class="h4">{{'FARMMANAGER.MANAGE.FARM.LIST.TOTAL_ANIMALS'|translate}}: {{farm.totalAnimals}}</div>
+                        <div class="h4">{{'FARMMANAGER.MANAGE.FARM.LIST.TOTAL_PLANTS'|translate}}: {{farm.totalPlants}}</div>
+                        <div class="pb-32" layout="column" layout-align="center center">
+                            <div layout="row" layout-align="center center">
+                                <md-icon class="icon md-48 s40 mr-15">
+                                    <i class="wi wi-forecast-io-{{farm.weatherInfo.currently.icon}} material-icons md-48"></i>
+                                </md-icon>
+                                <span class="md-display-2 font-weight-300 secondary-text">{{ farm.weatherInfo.currently.temperature }}</span>
+                                <span class="font-size-48 font-weight-300 hint-text text-super ml-8">&deg;</span>
+                                <span class="md-display-2 font-weight-300 hint-text">C</span>
+                            </div>
+                        </div>
+                        <div>{{farm.weatherInfo.currently.summary}}</div>
+                        <div>
+                            <a href="https://darksky.net/">
+                                <span class="pull-right">
+                      <img style="height:30px;" src="https://darksky.net/dev/img/attribution/poweredby-oneline.png" />
+                    </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-5 grey-50-bg border-top" layout="row" layout-align="end center">
+                        <md-button class="md-raised md-green-800-bg grey-A100-fg" ng-click="model.goToManageFarm(farm)">
+                            {{'FARMMANAGER.MANAGE.FARM.LIST.MANAGE'|translate}}
+                        </md-button>
+                    </div>
+                </ms-widget-front>
+            </ms-widget>
+        </div>
+    </md-content>
+    <!-- / CONTENT -->
+
+</div>

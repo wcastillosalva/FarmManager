@@ -1,0 +1,16 @@
+{
+    "TOOLBAR": {
+        "TOGGLE_NAVIGATION": "Toggle navigation",
+        "TOGGLE_NAVIGATION_FOLD": "Toggle navigation fold",
+        "TOGGLE_NAVIGATION_MODE": "Toggle navigation mode",
+        "SEARCH": "Search",
+        "USER_SETTINGS": "User settings",
+        "TOGGLE_QUICK_PANEL": "Toggle quick panel",
+        "ENGLISH": "English",
+        "SPANISH": "Español",
+        "DISCONNECTED_MESSAGE": "La conexión con el servidor se perdió, cambiando a modo sin conexión. Recuerda que algunas funcionalidades no estarán disponibles en modo sin conexión!",
+        "CONNECTED_MESSAGE": "La conexión con el servidor se restableció, habilitando todas las funcionalidades!",
+        "DATA_AUTO_SEND_SUCCESS": "Your pending data was sent successfully",
+        "ONLINE_OFFLINE": "Online/Offline"
+    }
+}

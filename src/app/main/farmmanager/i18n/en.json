@@ -1,0 +1,383 @@
+{
+    "FARMMANAGER": {
+        "FARMMANAGER": "FARM MANAGER!",
+        "FARMMANAGER_NAV": "FARM MANAGER",
+        "FARMS_AVAILABLE": "Farms Available",
+        "FUNCTION_NOT_AVILABLE_OFFLINE": "This function is not available offline",
+        "MENU": {
+            "HOME": "HOME",
+            "MY_FARMS": "MY FARMS",
+            "CONFIGURATION": "CONFIGURATION",
+            "PENDING_DATA": "PENDING DATA",
+            "CONFIG": {
+                "FARMS": "FARMS",
+                "ANIMAL_TYPES": "ANIMAL TYPES",
+                "PLANT_TYPES": "PLANT TYPES"
+            }
+        },
+        "EVENTS": {
+            "TYPE": {
+                "BORN": "Born",
+                "SOLD": "Sold",
+                "DEATH": "Death",
+                "STOLEN": "Stole",
+                "DISEASE": "Disease",
+                "MOVEMENT": "Movement",
+                "USER": "User"
+            },
+            "DESCRIPTION": {
+                "BORN": "Animal first added to system",
+                "SOLD": "Animal was sold",
+                "ANIMAL_MOVED_FROM_FARM": "Animal moved from farm",
+                "TO_FARM": "to farm"
+            }
+        },
+        "BREADCRUMB": {
+            "MANAGE_FARM": "Manage Farm",
+            "CONFIGURATION": "Configuration",
+            "FARMS_AVAILABLE": "Farms Available",
+            "PLANT_TYPES": "Plant Types",
+            "ANIMAL_TYPES": "Animal Types",
+            "ADD_FARM": "Add Farm",
+            "FARM": "Farm",
+            "ADD_PLANT_TYPE": "Add New Plant Type",
+            "PLANT_TYPE": "Plant Type",
+            "ADD_ANIMAL_TYPE": "Add Animal Type",
+            "ANIMAL_TYPE": "Animal Type",
+            "ANIMAL_SUB_TYPES": "Animal Sub Types",
+            "ADD_ANIMAL_SUB_TYPE": "Add Animal Sub Type",
+            "ANIMAL_SUB_TYPE": "Animal Sub Type",
+            "IMPORT": "Import"
+        },
+        "HOME": {
+            "HOME": "Home",
+            "PENDING_ITEMS_TITLE": "These are the saved changes pending to be sync with the server!",
+            "PENDING_NEW_ANIMALS": "New Animals",
+            "PENDING_ANIMALS": "Animals",
+            "PENDING_ANIMALSPHOTOS": "Animals Photos",
+            "PENDING_ANIMALS_EVENTS": "Animals Events",
+            "GO_TO_PENDING_DATA": "Go To Pending Data",
+            "CHANGES_NOT_SYNCED": "Changes Not Synced",
+            "SEE_MORE": "See More"
+        },
+        "PENDINGDATA": {
+            "PENDING_ITEMS_TITLE": "These are the saved changes pending to be sync with the server!",
+            "PENDING_NEW_ANIMALS": "New Animals",
+            "PENDING_ANIMALS": "Animals",
+            "PENDING_ANIMALSPHOTOS": "Animals Photos",
+            "PENDING_ANIMALS_EVENTS": "Animals Events",
+            "SENDPENDINGDATA": "Send Pending Data",
+            "DATA_PENDING_TO_BE_SYNCED": "Pending data to be synced",
+            "DETAIL": "Detail",
+            "CHANGE_TYPE": "Change Type",
+            "CODE": "Code",
+            "STATUS": "Status",
+            "ANIMAL": "Animal",
+            "NEWANIMAL": "New Animal",
+            "ANIMALEVENT": "Animal Event",
+            "ANIMALPHOTO": "Animal Photo",
+            "WAITING": "Waiting",
+            "SUCCESS": "Success",
+            "ERROR": "Error"
+        },
+        "MANAGE": {
+            "FARM": {
+                "FARM": {
+                    "MANAGE_FARM": "Manage Farm",
+                    "TOTAL": "Total",
+                    "MANAGE": "Manage",
+                    "TYPE": "Type",
+                    "ANIMAL_TYPES": "Animal Types",
+                    "PLANT_TYPES": "Plant Types",
+                    "STATISTICS": "Statistics"
+                },
+                "LIST": {
+                    "FARMS_AVAILABLE": "Farms Available",
+                    "MANAGE": "Manage",
+                    "SIZE": "Size",
+                    "TOTAL_ANIMALS": "Total Animals",
+                    "TOTAL_PLANTS": "Total Plants",
+                    "NAME": "Name"
+                }
+            },
+            "ANIMAL": {
+                "IMPORT": {
+                    "IMPORT_ANIMALS_OF_TYPE": "Import Animals Of Type",
+                    "IN_FARM": "In Farm",
+                    "UPLOAD": "Upload",
+                    "UPLOAD_HELPER": "Please uplodad your csv file",
+                    "FILEHASHEADERS": "File has headers",
+                    "CANCEL_IMPORT": "Cancel Import",
+                    "TYPE": "Type",
+                    "SUB_TYPE": "Sub Type",
+                    "CODE": "Code",
+                    "WEIGHT": "Weight",
+                    "SEX": "Sex",
+                    "OWNER": "Owner",
+                    "DATE_OF_BIRTH": "Date of birth",
+                    "DISPLAYING": "Displaying",
+                    "OF": "Of",
+                    "SUCCESS": "Success",
+                    "ERROR": "Error",
+                    "STATUS": "Status",
+                    "FINISH": "Finish",
+                    "IMPORT_MORE": "Import More"
+                },
+                "LIST": {
+                    "MANAGE_ANIMALS": "Manage Animals",
+                    "LIST_OF_ANIMALS_OF_TYPE": "List of animals of type:",
+                    "AVAILABLE_IN_FARM": "available in farm:",
+                    "SEARCH": "Search",
+                    "TYPE": "Type",
+                    "SUB_TYPE": "Sub Type",
+                    "CODE": "Code",
+                    "WEIGHT": "Weight",
+                    "SEX": "Sex",
+                    "OWNER": "Owner",
+                    "DATE_OF_BIRTH": "Date of birth",
+                    "VIEW": "View",
+                    "MOVE": "Move",
+                    "SELL": "Sell",
+                    "REMOVE": "Remove",
+                    "ADD_CHILD": "Add Breeding",
+                    "DISPLAYING": "Displaying",
+                    "OF": "Of",
+                    "PENDINGCHANGES": "This animal has changes pending to be sync",
+                    "IMPORT": "Import"
+                },
+                "ANIMAL": {
+                    "MANAGE_ANIMAL": "Manage Animal",
+                    "MANAGE_ANIMAL_ON_FARM": "Manage Animal On Farm",
+                    "TYPE": "Type",
+                    "SUB_TYPE": "Sub Type",
+                    "CODE": "Code",
+                    "MOTHER_CODE": "Mother Code",
+                    "FATHER_CODE": "Father Code",
+                    "WEIGHT": "Weight",
+                    "SEX": "Sex",
+                    "OWNER": "Owner",
+                    "DATE_OF_BIRTH": "Date Of Birth",
+                    "ENTER_DATE": "Enter Date",
+                    "CHANGE_IMMAGE": "Change Immage",
+                    "SAVE": "Save",
+                    "CANCEL": "Cancel",
+                    "MANAGE": "Manage",
+                    "VIEW": "View",
+                    "MOVE": "Move",
+                    "SELL": "Sell",
+                    "REMOVE": "Remove",
+                    "ADD_CHILD": "Add Breeding",
+                    "ADD_EVENT": "Add Event",
+                    "SEE_EVENT_MESSAGE": "See event message...",
+                    "UPLOAD": "Upload",
+                    "UPLOAD_HELPER": "Please uplodad your animal photo",
+                    "SHOW_ALL_FIELDS": "Show All Fields"
+                },
+                "ADDANIMAL": {
+                    "ADD_ANIMAL": "Add Animal",
+                    "MANAGE_ANIMAL": "Manage Animal",
+                    "MANAGE_ANIMAL_ON_FARM": "Manage Animal On Farm",
+                    "TYPE": "Type",
+                    "SUB_TYPE": "Sub Type",
+                    "CODE": "Code",
+                    "MOTHER_CODE": "Mother Code",
+                    "FATHER_CODE": "Father Code",
+                    "WEIGHT": "Weight",
+                    "SEX": "Sex",
+                    "OWNER": "Owner",
+                    "DATE_OF_BIRTH": "Date Of Birth",
+                    "ENTER_DATE": "Enter Date",
+                    "CHANGE_IMMAGE": "Change Immage",
+                    "SAVE": "Save",
+                    "CANCEL": "Cancel",
+                    "MANAGE": "Manage",
+                    "VIEW": "View",
+                    "MOVE": "Move",
+                    "SELL": "Sell",
+                    "KILL": "Kill",
+                    "ADD_CHILD": "Add Breeding",
+                    "UPLOAD": "Upload",
+                    "SHOW_ALL_FIELDS": "Show All Fields"
+                },
+                "MODAL": {
+                    "MOVE": {
+                        "MOVE_ANIMAL": "Move Animal",
+                        "FARMS_AVAILABLE": "Farms Available",
+                        "MOVE": "Move",
+                        "CANCEL": "Cancel"
+                    },
+                    "SELL": {
+                        "SELL_ANIMAL": "Sell Animal",
+                        "PLEASE_CONFIRM_YOU_WANT_TO_SELL_THE_ANIMAL": "Please confirm you want to sell the animal",
+                        "YES": "Yes",
+                        "NO": "No"
+                    },
+                    "REMOVE": {
+                        "REMOVE_ANIMAL": "Remove Animal",
+                        "REASON_TYPE": "Reason Type",
+                        "REASON_TEXT": "Reason Text",
+                        "REMOVE": "Remove",
+                        "CANCEL": "Cancel",
+                        "DEATH": "Death",
+                        "STOLEN": "Stole",
+                        "DISEASE": "Disease"
+                    },
+                    "ADD_EVENT": {
+                        "ADD_EVENT_TO_ANIMAL": "Add Event To Animal",
+                        "DESCRIPTION": "Description",
+                        "EVENT_DATE": "Event Date",
+                        "ADD": "Add",
+                        "CANCEL": "Cancel"
+                    }
+                },
+                "EVENTS": {
+                    "DESCRIPTION": {
+                        "ANIMAL_MOVED_FROM_FARM": "Animal moved from farm",
+                        "TO_FARM": "to farm"
+                    }
+                }
+            }
+        },
+        "CONFIG": {
+            "FARM": {
+                "LIST": {
+                    "NAME": "Name",
+                    "SIZE": "Size",
+                    "TOTAL_ANIMALS": "Total Animals",
+                    "TOTAL_PLANTS": "Total Plants",
+                    "FARMS_AVAILABLE": "Farms Available",
+                    "CONFIGURE_ANIMAL_TYPES": "Configure Animal Types",
+                    "CONFIGURE_PLANT_TYPES": "Configure Plant Types",
+                    "REMOVE": "Remove",
+                    "VIEW": "View"
+                },
+                "ADD": {
+                    "ADD_NEW_FARM": "Add New Farm",
+                    "ADD_FARM": "Add Farm",
+                    "NAME": "Name",
+                    "SIZE": "Size",
+                    "MAP_COORDINATES": "Coordinates",
+                    "SAVE": "Save",
+                    "CANCEL": "Cancel"
+                },
+                "FARM": {
+                    "FARM": "Farm",
+                    "NAME": "Name",
+                    "SIZE": "Size",
+                    "MAP_COORDINATES": "Coordinates",
+                    "SAVE": "Save",
+                    "CANCEL": "Cancel"
+                },
+                "MODAL": {
+                    "REMOVE": {
+                        "REMOVE_FARM": "Remove Farm",
+                        "PLEASE_CONFIRM_YOU_WANT_TO_REMOVE_THE_FARM": "Please confirm you want to remove the farm",
+                        "YES": "Yes",
+                        "NO": "No"
+                    },
+                    "MANAGEANIMALS": {
+                        "MANAGEANIMALS_ANIMAL_TYPES_IN_FARM": "Manage Animal Types In Farm",
+                        "CLOSE": "Close"
+                    },
+                    "MANAGEPLANTS": {
+                        "MANAGEPLANTS_PLANT_TYPES_IN_FARM": "Manage Plant Types In Farm",
+                        "CLOSE": "Close"
+                    }
+                }
+            },
+            "ANIMALTYPES": {
+                "LIST": {
+                    "ANIMAL_TYPES": "Animal Types",
+                    "NAME": "Name",
+                    "TOTAL": "Total",
+                    "TOTAL_SUB_TYPES": "Total Sub Types",
+                    "VIEW": "View",
+                    "VIEW_ANIMAL_SUBTYPES": "View Animal Sub Types",
+                    "REMOVE": "Remove"
+                },
+                "ADD": {
+                    "ADD_NEW_ANIMAL_TYPE": "Add New Animal Type",
+                    "ADD_ANIMAL_TYPE": "Add Animal Type",
+                    "NAME": "Name",
+                    "SAVE": "Save",
+                    "CANCEL": "Cancel"
+                },
+                "ANIMALTYPE": {
+                    "ANIMAL_TYPE": "Animal Type",
+                    "NAME": "Name",
+                    "SAVE": "Save",
+                    "CANCEL": "Cancel"
+                },
+                "MODAL": {
+                    "REMOVE": {
+                        "REMOVE_ANIMAL_TYPE": "Remove Animal Type",
+                        "PLEASE_CONFIRM_YOU_WANT_TO_REMOVE_THE_ANIMAL_TYPE": "Please confirm you want to remove the animal type",
+                        "YES": "Yes",
+                        "NO": "No"
+                    }
+                }
+            },
+            "ANIMALSUBTYPES": {
+                "LIST": {
+                    "ANIMAL_SUB_TYPES_FOR": "Animal Sub Types For",
+                    "NAME": "Name",
+                    "TOTAL": "Total",
+                    "VIEW": "View",
+                    "REMOVE": "Remove",
+                    "CANCEL": "Cancel"
+                },
+                "ADD": {
+                    "ADD_NEW_ANIMAL_SUB_TYPE": "Add New Animal Sub Type",
+                    "ADD_ANIMAL_SUB_TYPE": "Add Animal Sub Type",
+                    "NAME": "Name",
+                    "SAVE": "Save",
+                    "CANCEL": "Cancel"
+                },
+                "ANIMALSUBTYPE": {
+                    "ANIMAL_SUB_TYPE": "Animal Sub Type",
+                    "NAME": "Name",
+                    "SAVE": "Save",
+                    "CANCEL": "Cancel"
+                },
+                "MODAL": {
+                    "REMOVE": {
+                        "REMOVE_ANIMAL_SUB_TYPE": "Remove Animal Sub Type",
+                        "PLEASE_CONFIRM_YOU_WANT_TO_REMOVE_THE_ANIMAL_SUB_TYPE": "Please confirm you want to remove the animal sub type",
+                        "YES": "Yes",
+                        "NO": "No"
+                    }
+                }
+            },
+            "PLANTTYPES": {
+                "LIST": {
+                    "PLANT_TYPES": "Plant Types",
+                    "NAME": "Name",
+                    "TOTAL": "Total",
+                    "VIEW": "View",
+                    "REMOVE": "Remove"
+                },
+                "ADD": {
+                    "ADD_NEW_PLANT_TYPE": "Add New Plant Type",
+                    "ADD_PLANT_TYPE": "Add New Plant Type",
+                    "NAME": "Name",
+                    "SAVE": "Save",
+                    "CANCEL": "Cancel"
+                },
+                "PLANTTYPE": {
+                    "PLANT_TYPE": "Plant Type",
+                    "NAME": "Name",
+                    "SAVE": "Save",
+                    "CANCEL": "Cancel"
+                },
+                "MODAL": {
+                    "REMOVE": {
+                        "REMOVE_PLANT_TYPE": "Remove Plant Type",
+                        "PLEASE_CONFIRM_YOU_WANT_TO_REMOVE_THE_PLANT_TYPE": "Please confirm you want to remove the plant type",
+                        "YES": "Yes",
+                        "NO": "No"
+                    }
+                }
+            }
+        }
+    }
+}

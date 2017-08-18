@@ -1,0 +1,18 @@
+{
+  "APPID": {
+    "TITLE": "Llave de Aplicación.",
+    "SUBTITLE": "Este usuario no pertenece a ninguna aplicación, puedes crear una nueva aplicación o puedes ingresar la llave de una aplicación existente a la cual deseas pertenecer, por favor selecciona una opción para continuar:",
+    "ENTER_SHARED_APP_KEY":"Ingresar Llave de Aplicación Compartida",
+    "CREATE_NEW_APP_KEY":"Crear nueva Llave de Aplicación",
+    "DAYS": "days",
+    "HOURS": "hours",
+    "MINUTES": "minutes",
+    "SECONDS": "seconds",
+    "MESSAGE": "Por favor ingresa la llave de aplicación a la cual deseas pertenecer.",
+    "APP_HEY":"Llave de Aplicación",
+    "EMAIL_ADRESS": "Dirección de Email",
+    "ASSOCIATE": "ASOCIAR",
+    "LOGOUT":"Salir",
+    "CANCEL":"Cancelar"
+  }
+}

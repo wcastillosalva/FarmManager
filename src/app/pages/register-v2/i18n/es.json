@@ -1,0 +1,25 @@
+{
+  "REGISTER_V2": {
+    "INTRO_TITLE": "Bienvenido al portal Farm Manager!",
+    "INTRO_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat, vel convallis elit fermentum pellentesque. Sed mollis velit facilisis facilisis viverra.",
+    "TITLE": "Crea tu cuenta",
+    "DESCRIPTION": "Registrate ahora y permitenos ayudarte con los controles y registros en tu finca",
+    "NAME": "Nombre",
+    "EMAIL": "Email",
+    "PASSWORD": "Contraseña",
+    "PASSWORD_CONFIRM": "(Confirmación de) Contraseña",
+    "READ_ACCEPT": "He leido y acepto los",
+    "TERMS_COND": "términos y condiciones",
+    "CREATE_ACCOUNT": "CREAR MI CUENTA",
+    "ALREADY_HAVE": "Ya posees una cuenta?",
+    "LOGIN": "Ingresar",
+    "ERRORS": {
+      "USERNAME_REQUIRED": "El campo Nombre es requerido",
+      "EMAIL_REQUIRED": "El campo Email es requerido",
+      "EMAIL_MUST_VALID": "El campo Email debe de ser una dirección e-mail válida",
+      "PASSWORD_REQUIRED": "El campo Contraseña es requerido",
+      "PASSWORD_CONFIRM_REQUIRED": "El campo Confirmación de Contraseña es requerido",
+      "TERMS_REQUIRED": "Debes aceptar los términos y condiciones antes de enviar el formulario"
+    }
+  }
+}

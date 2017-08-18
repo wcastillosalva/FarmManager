@@ -1,0 +1,34 @@
+<div layout="row" layout-wrap>
+
+    <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="65">
+        <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+            <header class="md-accent-bg">
+                <div class="title" translate="PROFILE.LOCALSTORAGE_INFORMATION">Local Storage Information</div>
+            </header>
+
+            <div class="content">
+                <div class="info-line">
+                    <div class="title" translate="PROFILE.PENDING_NEW_ANIMALS">Pending New Animals</div>
+                    <div class="info">{{vm.pendingNewAnimals}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="title" translate="PROFILE.PENDING_ANIMALS">Pending Animals</div>
+                    <div class="info">{{vm.pendingAnimals}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="title" translate="PROFILE.PENDING_ANIMALSPHOTOS">Pending Animals Photos</div>
+                    <div class="info">{{vm.pendingAnimalsPhotos}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="title" translate="PROFILE.PENDING_ANIMALS_EVENTS">Pending Animals Events</div>
+                    <div class="info">{{vm.pendingAnimalsEvents}}</div>
+                </div>
+                <div class="row" layout="row" layout-align="center center">
+                    <md-button type="submit" class="md-raised md-red-800-bg grey-A100-fg" aria-label="Delete Local Storage" ng-disabled="basicForm.$invalid || basicForm.$pristine" ng-click="vm.deleteLocalStorage()" translate="PROFILE.DELETE_LOCAL_STORAGE">
+                        Delete Local Storage
+                    </md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

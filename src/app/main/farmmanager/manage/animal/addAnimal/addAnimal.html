@@ -1,0 +1,134 @@
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+    <!-- HEADER -->
+    <div class="header md-light-green-A200-bg" layout="row" layout-align="space-between">
+        <div layout="column" layout-align="center start">
+            <div class="breadcrumb" layout="row" hide-xs layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+                <span class="parent">{{'FARMMANAGER.BREADCRUMB.MANAGE_FARM'|translate}}</span>
+                <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+                <span class="parent">{{model.farm.name}}</span>
+            </div>
+            <div class="white-fg" layout="row">
+                <div class="h1" layout="row" layout-align="start center">
+                    <md-icon md-font-icon="icon-cube-outline"></md-icon>
+                    <span class="md-title">{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.ADD_ANIMAL'|translate}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / HEADER -->
+    <md-toolbar layout="row" layout-align="space-between center" class="md-green-700-bg grey-A100-fg" layout-xs="column">
+        <div class="md-toolbar-tools" layout="row" layout-xs="column" layout-sm="column">
+            <h2 class="padding-left-24" hide-xs>
+                <span> {{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.ADD_ANIMAL'|translate}}</span>
+            </h2>
+        </div>
+    </md-toolbar>
+    <md-content>
+        <div class="form-wrapper md-whiteframe-1dp" flex="100">
+            <form name="basicForm" class="md-inline-form" novalidate>
+                <div layout="row" layout-xs="column">
+                    <md-input-container flex>
+                        <input type="text" name="code" ng-model="model.animal.code" placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.CODE'|translate}}" required>
+                        <div ng-messages="basicForm.code.$error" role="alert">
+                            <div ng-message="required">
+                                <span>Code field is required.</span>
+                            </div>
+                        </div>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-xs="column" ng-hide="model.screenIsSmall">
+                    <md-input-container flex>
+                        <input type="text" name="fatherCode" ng-model="model.animal.fatherCode" placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.FATHER_CODE'|translate}}">
+                    </md-input-container>
+                    <md-input-container flex>
+                        <input type="text" name="motherCode" ng-model="model.animal.motherCode" placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.MOTHER_CODE'|translate}}">
+                    </md-input-container>
+                </div>
+                <div layout="column" layout-gt-xs="row">
+                    <md-input-container flex>
+                        <label>{{'FARMMANAGER.MANAGE.ANIMAL.ANIMAL.TYPE'|translate}}</label>
+                        <md-select ng-model="model.animalType.id" disabled>
+                            <md-option ng-repeat="animalType in model.animalTypes track by animalType.id" value="{{animalType.id}}">
+                                {{animalType.type}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.SUB_TYPE'|translate}}</label>
+                        <md-select ng-model="model.animalSubTypeId" required>
+                            <md-option ng-repeat="animalSubType in model.animalSubTypes track by animalSubType.id" value="{{animalSubType.id}}">
+                                {{animalSubType.type}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-xs="column" flex="100">
+                    <div flex>
+                        <div ng-if="model.displayImage">
+                            <md-card>
+                                <md-card-content>
+                                    <div>
+                                        <img ng-src="{{model.image.content}}" style="width:100%" class="md-card-image">
+                                    </div>
+                                </md-card-content>
+                                <md-card-actions layout="row" layout-align="end center">
+                                    <md-button class="md-icon-button md-raised md-warn" ng-click="model.changeImmage()">
+                                        <md-icon md-font-icon="icon-close">
+                                            {{'FARMMANAGER.MANAGE.ANIMAL.ANIMAL.CHANGE_IMMAGE'|translate}}
+                                        </md-icon>
+                                    </md-button>
+                                </md-card-actions>
+                            </md-card>
+                        </div>
+                        <div id="image-uploader" flow-init="model.ngFlowOptions" flow-name="model.ngFlow.flow" flow-files-submitted="model.upload()" flow-file-success="model.imageSuccess($file, $message)" flow-complete="model.uploadComplete()" flow-file-added="!!{svg:1,png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]" class="md-padding" flex ng-if="!model.displayImage">
+                            <div class="upload-button" layout="column" layout-align="center center">
+                                <md-button class="md-accent md-raised" flow-btn>
+                                    {{'FARMMANAGER.MANAGE.ANIMAL.ANIMAL.UPLOAD'|translate}}
+                                </md-button>
+                                <span class="secondary-text mt-8">
+                                    {{'FARMMANAGER.MANAGE.ANIMAL.ANIMAL.UPLOAD_HELPER'|translate}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="model.screenIsSmall" layout-align="center center" ng-click="model.showAllFields()">
+                        <md-button class="md-icon-button">
+                            <md-icon md-font-icon="icon-chevron-double-down" class="s24"></md-icon>
+                        </md-button>
+                        {{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.SHOW_ALL_FIELDS'|translate}}
+                    </div>
+                    <div flex ng-hide="model.screenIsSmall">
+                        <div layout="column">
+                            <md-input-container flex>
+                                <input type="text" name="weight" ng-model="model.animal.weight" placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.WEIGHT'|translate}}">
+                            </md-input-container>
+                            <md-input-container flex>
+                                <input type="text" name="sex" ng-model="model.animal.sex" placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.SEX'|translate}}">
+                            </md-input-container>
+                            <md-input-container flex>
+                                <input type="text" name="owner" ng-model="model.animal.owner" placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.OWNER'|translate}}">
+                            </md-input-container>
+                            <div layout="column" hide-sm hide-xs>
+                                <span class="md-subhead">{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.DATE_OF_BIRTH '|translate}}</span>
+                                <md-datepicker ng-model="model.animal.dateOfBirth" md-placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.ENTER_DATE '|translate}}"></md-datepicker>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div layout="column" hide-lg hide-md hide-xl ng-hide="model.screenIsSmall">
+                    <span class="md-subhead">{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.DATE_OF_BIRTH '|translate}}</span>
+                    <md-datepicker ng-model="model.animal.dateOfBirth" md-placeholder="{{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.ENTER_DATE '|translate}}"></md-datepicker>
+                </div>
+                <div layout="row" layout-align="end center">
+                    <md-button type="submit" class="md-raised md-green-800-bg grey-A100-fg" aria-label="Submit" ng-click="model.addAnimal()">
+                        {{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.SAVE'|translate}}
+                    </md-button>
+                    <md-button class="md-raised" aria-label="Cancel" ng-click="model.cancel()">
+                        {{'FARMMANAGER.MANAGE.ANIMAL.ADDANIMAL.CANCEL'|translate}}
+                    </md-button>
+                </div>
+            </form>
+        </div>
+    </md-content>
+</div>

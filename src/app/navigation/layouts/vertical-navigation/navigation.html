@@ -1,0 +1,15 @@
+<md-toolbar class="navigation-header md-whiteframe-1dp md-green-500-bg" layout="row" layout-align="space-between center">
+    <div class="logo" layout="row" layout-align="start center">
+        <span class="logo-image md-green-800-bg">FM</span>
+        <span class="logo-text">FARM MANAGER</span>
+
+    </div>
+
+    <md-icon class="fold-toggle s18" md-font-icon="icon-backburger" hide show-gt-sm ng-click="vm.toggleMsNavigationFolded()"></md-icon>
+</md-toolbar>
+
+<ms-navigation class="scrollable" folded="vm.folded" ms-scroll="vm.msScrollOptions"></ms-navigation>
+<div flex></div>
+<div class="row text-center" layout-align="center center">
+    <div class="description">{{vm.appVersion}}</div>
+</div>

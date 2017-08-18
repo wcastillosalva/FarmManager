@@ -1,0 +1,18 @@
+{
+  "APPID": {
+    "TITLE": "Appication Key.",
+    "SUBTITLE": "This user do not belong to any application, you can create a new application or you can enter the key of the application to which you want to belong, please select an option to continue:",
+    "ENTER_SHARED_APP_KEY":"Enter Shared App Key",
+    "CREATE_NEW_APP_KEY":"Create New App Key",
+    "DAYS": "days",
+    "HOURS": "hours",
+    "MINUTES": "minutes",
+    "SECONDS": "seconds",
+    "MESSAGE": "Please enter the application key you belong.",
+    "APP_HEY":"Application Key",
+    "EMAIL_ADRESS": "Email address",
+    "ASSOCIATE": "ASSOCIATE",
+    "LOGOUT":"Log Out",
+    "CANCEL":"Cancel"
+  }
+}

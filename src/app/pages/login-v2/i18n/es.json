@@ -1,0 +1,25 @@
+{
+  "LOGIN_V2": {
+    "INTRO_TITLE": "Bienvenido al portal Farm Manager!",
+    "INTRO_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat, vel convallis elit fermentum pellentesque. Sed mollis velit facilisis facilisis viverra.",
+    "TITLE": "Ingresa con tu cuenta",
+    "DESCRIPTION": "Permitenos ayudarte con los controles y registros en tu finca",
+    "EMAIL": "Email",
+    "PASSWORD": "Contraseña",
+    "REMEMBER_ME": "Recuerdame",
+    "FORGOT_PASSWORD": "Olvidaste tu contraseña?",
+    "LOG_IN": "INGRESAR",
+    "OR": "O",
+    "WITH_GOOGLE": "Log in with Google",
+    "WITH_FACEBOOK": "Log in with Facebook",
+    "DONT_HAVE_ACCOUNT": "No posees una cuenta?",
+    "CREATE_ACCOUNT": "Crear una cuenta",
+    "SEE_SPANISH_VERSION":"See english version",
+    "GO":"Go",
+    "ERRORS": {
+      "EMAIL_REQUIRED": "El campo Email es requerido",
+      "EMAIL_MUST_VALID": "El campo Email debe de ser una dirección válida",
+      "PASSWORD_REQUIRED": "El campo Contraseña es requerido"
+    }
+  }
+}

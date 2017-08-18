@@ -1,0 +1,94 @@
+.header {
+    height: 136px !important;
+    min-height: 136px !important;
+    max-height: 136px !important;
+    padding: 24px 0;
+    .h1 {
+        md-icon {
+            margin-right: 12px;
+        }
+    }
+    .product-count {
+        margin: 6px 0 0 36px;
+    }
+    .search {
+        position: relative;
+        padding-left: 24px;
+        max-width: 480px;
+        .search-icon {
+            margin: 0 -24px 0 0;
+        }
+        .search-input {
+            margin: 0 0 0 32px;
+            background: none;
+            font-size: 16px;
+            line-height: 40px;
+            height: 40px;
+            color: #FFFFFF;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            transition: border-color 300ms ease;
+            &:focus {
+                border-color: rgba(255, 255, 255, 1);
+            }
+            &::-webkit-input-placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+}
+
+.md-color-view {
+    background-color: #2196F3 !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.md-color-sell {
+    background-color: #388E3C !important;
+    color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.md-color-move {
+    background-color: #455A64 !important;
+    color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.md-color-kill {
+    background-color: #D32F2F !important;
+    color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.md-color-add-child {
+    background-color: #FBC02D !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+md-toast.md-success-toast-theme {
+    .md-toast-content {
+        background-color: green;
+    }
+}
+
+md-toolbar>.btn-view-type {
+    display: none !important;
+}
+
+#language-menu {
+    display: none !important;
+}
+
+@media only screen and (min-width: $layout-breakpoint-sm) {
+    md-toolbar>.btn-view-type {
+        display: block !important;
+    }
+    #language-menu {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: $layout-breakpoint-xs) {
+    .header{
+      height: 56px !important;
+      min-height: 56px !important;
+      max-height: 56px !important;
+    }
+}
